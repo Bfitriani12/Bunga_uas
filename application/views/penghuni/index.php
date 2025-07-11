@@ -98,6 +98,9 @@
                 </form>
             </div>
             <div class="col-md-6 text-end">
+                <a href="<?= base_url('penghuni/active') ?>" class="btn btn-success">
+                    <i class="fas fa-user-check"></i> Penghuni Aktif
+                </a>
                 <a href="<?= base_url('penghuni') ?>" class="btn btn-outline-secondary">
                     <i class="fas fa-refresh"></i> Reset
                 </a>

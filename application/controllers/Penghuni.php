@@ -153,4 +153,12 @@ class Penghuni extends CI_Controller {
         
         $this->load->view('penghuni/index', $data);
     }
+
+    // Daftar penghuni aktif
+    public function active() {
+        $data['title'] = 'Daftar Penghuni Aktif';
+        $data['penghuni'] = $this->Penghuni_model->get_active_penghuni();
+        $data['stats'] = $this->Penghuni_model->get_penghuni_stats();
+        $this->load->view('penghuni/active', $data);
+    }
 } 

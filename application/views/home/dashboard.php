@@ -52,9 +52,6 @@
                         <a href="<?= base_url('penghuni') ?>" class="btn btn-light btn-lg">
                             <i class="fas fa-users"></i> Kelola Penghuni
                         </a>
-                        <a href="<?= base_url('test') ?>" class="btn btn-outline-light btn-lg">
-                            <i class="fas fa-database"></i> Test Database
-                        </a>
                     </div>
                 </div>
                 <div class="col-md-4 text-center">
@@ -129,7 +126,7 @@
             </div>
             
             <div class="col-md-3 mb-4">
-                <a href="#" class="quick-action">
+                <a href="<?= base_url('kamar') ?>" class="quick-action">
                     <div class="card feature-card h-100">
                         <div class="card-body text-center">
                             <i class="fas fa-bed fa-3x text-success mb-3"></i>
