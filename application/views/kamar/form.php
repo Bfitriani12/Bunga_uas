@@ -56,6 +56,23 @@
                                 <option value="terisi" <?= set_select('status', 'terisi', isset($kamar) && $kamar->status == 'terisi') ?>>Terisi</option>
                             </select>
                         </div>
+                        <div class="mb-3">
+                            <label class="form-label">
+                                <i class="fas fa-boxes"></i> Barang/Alat di Kamar
+                            </label>
+                            <div class="row">
+                                <?php foreach($all_barang as $b): ?>
+                                <div class="col-md-6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="barang[]" value="<?= $b->id ?>" id="barang<?= $b->id ?>" <?= (isset($barang_kamar) && in_array($b->id, $barang_kamar)) ? 'checked' : '' ?>>
+                                        <label class="form-check-label" for="barang<?= $b->id ?>">
+                                            <?= $b->nama ?> <span class="badge bg-info">Rp <?= number_format($b->harga,0,',','.') ?></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
                         <div class="d-flex justify-content-between mt-4">
                             <a href="<?= base_url('kamar') ?>" class="btn btn-secondary">
                                 <i class="fas fa-times"></i> Batal

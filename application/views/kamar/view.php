@@ -57,6 +57,20 @@
                         <div class="info-label"><i class="fas fa-database"></i> ID Kamar</div>
                         <div class="mt-1"><code>#<?= str_pad($kamar->id, 3, '0', STR_PAD_LEFT) ?></code></div>
                     </div>
+                    <div class="info-item">
+                        <div class="info-label"><i class="fas fa-boxes"></i> Barang/Alat di Kamar</div>
+                        <div class="mt-1">
+                            <?php if(empty($barang_kamar)): ?>
+                                <span class="text-muted">Tidak ada barang/alat di kamar ini</span>
+                            <?php else: ?>
+                                <ul class="mb-0">
+                                    <?php foreach($barang_kamar as $b): ?>
+                                    <li><?= $b->nama ?> <span class="badge bg-info">Rp <?= number_format($b->harga,0,',','.') ?></span></li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            <?php endif; ?>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row mt-4">
